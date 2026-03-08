@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunkin' Delights | Bold Flavors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="drip-bg"></div>
+
+    <nav class="main-nav">
+        <div class="brand">DUNKIN'<span>DELIGHTS</span></div>
+        <div class="cart-pill" onclick="viewBasket()">
+            <span class="icon">🍩</span>
+            <span id="basket-qty">0</span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Gulp. Munch. Repeat.</h1>
+        <p>America Runs on Freshness.</p>
+    </header>
+
+    <main id="flavor-grid"></main>
+
+    <div id="basket-modal" class="modal-dim">
+        <div class="checkout-card">
+            <span class="exit" onclick="viewBasket()">&times;</span>
+            <h2>Your Order 🥤</h2>
+            <div id="basket-items"></div>
+            
+            <div class="bill">
+                <div class="bill-row"><span>Subtotal:</span> <span id="sub-total">₹0</span></div>
+                <div class="bill-row promo"><span>Promo Applied:</span> <span id="promo-val">-₹0</span></div>
+                <div class="bill-row total"><span>Total:</span> <span id="grand-total">₹0</span></div>
+            </div>
+            
+            <button class="pay-btn" onclick="finishOrder()">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
